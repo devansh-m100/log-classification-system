@@ -25,3 +25,9 @@ Along the journey of building this project, I am sharing informative posts docum
 **Post #1 – Python & Pandas Exploration**
 
 https://www.linkedin.com/posts/devansh-mahindrakar_python-pandas-machinelearning-activity-7438551506611593217-VrHj
+
+errors faced and resolved - 
+
+1) Ensure kernel is selected "venv python"
+2) while dealing with sentence transformers microsoft visual c++ redistributable was nnecessary to install.
+3) in sentence transformer section progress was not visible of output so had to install ipywidgets and also wanted to ensure jupyter components are updated too, so ran te command pip install --upgrade jupyter ipywidgets
