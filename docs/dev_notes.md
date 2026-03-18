@@ -48,13 +48,23 @@ This document records implementation details, observations, experiments, and cha
 
 - The Groq API is used as a free service with usage limits; API consumption and remaining quota can be monitored through the Groq dashboard on the official website.
 
+- Developed a FastAPI server to expose the log classification logic as an API.
+- Used direct script execution (`classify.py`) for local testing and debugging.
+- Used FastAPI endpoints for simulating real-world API-based interaction.
+
+- Successfully integrated FastAPI server to expose the log classification pipeline as an API endpoint.
+- Implemented CSV file upload functionality using FastAPI (`UploadFile`) for batch log processing.
+- Installed and used Postman as an external API client to simulate real-world API interactions.
+- Successfully sent CSV file requests via Postman using `form-data` and received processed output.
+- Verified end-to-end pipeline: CSV input → API request → hybrid classification (Regex + BERT + LLM) → labeled output.
+- Confirmed that the API correctly processes and returns classified results for multiple log entries.
+- Observed and validated API response behavior (CSV output format) in Postman.
+
 ---
 
 # 7. Challenges Encountered
 
 - Updated Groq LLM model in processor_llm.py file after `deepseek-r1-distill-llama-70b` was deprecated and replaced it with a supported model.
-
-
 
 ---
 
